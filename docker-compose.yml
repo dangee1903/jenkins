@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  #container
+  client:
+    container_name: client
+    build:
+      dockerfile: Dockerfile-client
+      context: .
+      args:
+        - STAGE=development
+    restart: always
+    ports:
+     - "3000:3000"
+    volumes:
+     - ./log/nginx:/var/log/nginx
+    
+    
+ 
