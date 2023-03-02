@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        state('Clone') {
+        stage('Clone') {
             steps {
-                git: 'https://github.com/dangee1903/jenkins.git'
+                git 'https://github.com/dangee1903/jenkins.git'
             }
         }
     }
