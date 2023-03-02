@@ -21,7 +21,7 @@ pipeline {
                     withDockerRegistry(credentialsId: '659f37e2-e2ac-4afd-8b7a-ac137d3a9bec', toolName: 'docker', url: 'https://index.docker.io/v1/') {
                         // some block
                         sh 'docker build -t axiton1994/nextjs:latest .'
-                        sh 'docker push -t axiton1994/nextjs:latest'
+                        sh 'docker push axiton1994/nextjs:latest'
                     }
                 }
             }
