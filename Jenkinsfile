@@ -9,7 +9,7 @@ pipeline {
         stage('Build stage') {
             steps {
                 // This step should not normally be used in your script. Consult the inline help for details.
-                withDockerRegistry(credentialsId: '33c815c1-0739-48b6-b59d-275aa6fb962a', url: 'https://index.docker.io/v1/') {
+                withDockerRegistry(credentialsId: '33c815c1-0739-48b6-b59d-275aa6fb962a', toolName: 'docker', url: 'https://index.docker.io/v1/') {
                     // some block
                     sh 'docker build -t axiton1994/nextjs:latest .'
                     sh 'docker push -t axiton1994/nextjs:latest'
